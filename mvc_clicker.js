@@ -67,7 +67,7 @@ var Octopus = {
     for (i = 0; i < model.cats.length; i++) {
       if (model.cats[i].name === firstChildId) {
         ++model.cats[i].clicks;
-        //   console.log(model.cats[i].clicks);
+
         view.render(i);
         break;
       }
@@ -77,15 +77,13 @@ var Octopus = {
 var view = {
 
   init: function() {
-    //      console.log("inside init");
     var elementtorender = document.getElementById('catview');
-    var buttontorender =   document.getElementById('buttontemplate')
-     let buttontemplate = new Array();
-  //        console.log("elementtorender");
+    var buttontorender = document.getElementById('buttontemplate')
+    let buttontemplate = new Array();
     elementtorender.addEventListener('click', Octopus.incrementCatClick);
-  for(i=0;i<model.cats.length;i++){
-      buttontemplate[i] = '<li> <a onclick = "view.render('+Octopus.getCatId(i)+')" > '+ Octopus.getCatName(i)+'</a> </li> ';
-      buttontorender.innerHTML = buttontorender.innerHTML+buttontemplate[i];
+    for (i = 0; i < model.cats.length; i++) {
+      buttontemplate[i] = '<li> <a onclick = "view.render(' + Octopus.getCatId(i) + ')" > ' + Octopus.getCatName(i) + '</a> </li> ';
+      buttontorender.innerHTML = buttontorender.innerHTML + buttontemplate[i];
       console.log(buttontemplate);
 
     }
@@ -93,16 +91,11 @@ var view = {
   },
   getTemplate: function(i) {
     this.template = "<img id='" + Octopus.getCatName(i) + "' src='" + Octopus.getCatName(i) + ".jpg'><h5><span id='cat-name'>Cat Name:" + Octopus.getCatName(i) + " </span>  <p> Click Me..</p> </h5><h4> No of Clicks :" + Octopus.getCatClicks(i) + "</h4>";
-    //console.log("template retruned Succesfully");
-    //console.log(this.template);
-
     return this.template;
   },
 
   render: function(id) {
-    // display the current cat
     var elementtorender = document.getElementById('catview');
-    // console.log(elementtorender);
     elementtorender.innerHTML = view.getTemplate(id);
   }
 
@@ -110,5 +103,3 @@ var view = {
 }
 
 view.init();
-
-var buttontemplate = '< li > < a onclick = "view.render('+Octopus.getCatId+')" > '+ Octopus.getCatName+'< /a> < /li> ';
