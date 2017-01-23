@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CatClicker -Advance
+    </title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+    <style>
+    body{
+      margin-left: 30%;
+    }
+    h4,h5{
+      margin-bottom: 20px;
+    }
+    .dropdown-menu>li>a:hover{
+      background-color: lime;
+    }
+    .dropdown{
+      margin-top: 5%;
+      margin-bottom: 5%;
+    }
+    div{
+      width: 50%;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">See the Cat...
+        <span class="caret"></span>
+      </button>
+      <ul id="buttontemplate" class="dropdown-menu">  </ul>
+    </div>
+     <span id="catview"> </span>
+     <button id="Admin" class="btn btn-lg btn-info" type="button">Admin</button>
+
+    <form class="form-inline" name="Adminform" onsubmit="Octopus.submit()">
+      <div class="form-group">
+        <label for="catname">Cat Name</label>
+        <input type="text" class="form-control" id="catname" placeholder="Jane Doe" required>
+      </div>
+      <div class="form-group">
+        <label for="ImageURL">ImageUrl</label>
+        <input type="text" class="form-control" id="ImageURL" placeholder="/image.jpg" required>
+      </div>
+      <div class="form-group">
+        <label for="Clicks">Clicks</label>
+        <input type="number" class="form-control" id="Clicks" placeholder="no of clicks" required>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="reset" class="btn btn-primary">Cancel</button>
+      <button id="logout" type="button" class="btn btn-danger"> Logout </button>
+    </form>
+
+
+    <script src="mvc_clickerPro.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>
