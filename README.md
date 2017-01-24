@@ -15,13 +15,13 @@ This application involves
  It is the basic first version which does not follow any design patterns
 
  # MVC_CatClicker
- # --------------
+  --------------
  It is sturctured as MVC pattern, which the view part is seperated as two, and the model part holds the data required
  contorller is used to connect the model and the view.
  I won't say it is complete MVC catclicker since some improvements need to be made.
 
  # MVC_CatClickerPro
- # -----------------
+  -----------------
  I developed the Pro version for the MVC_CatClicker,which involves responding dynamic changes in the view.
  I has a Admin mode where, we can add new cats.
  Here,
