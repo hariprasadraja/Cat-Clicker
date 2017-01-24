@@ -2,6 +2,8 @@
 # MVC_CatClicker-Javascript
 
 It is a simple app by implementing mvc pattern in Javascript for my learning purpose.
+There are lot of variours cat clickers available.I made this when i was learning MVC pattern in javascirpt
+
 This application involves
  1.catClickerBasic
  2.MVC_CatClicker
