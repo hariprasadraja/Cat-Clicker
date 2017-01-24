@@ -55,11 +55,11 @@ var model ={
       let index =this.cats.length;
             for(i=0;i<index;i++){
               if(Octopus.getCatName(i) === catname){
-              alert("cat name is already present");
+              prompt("cat name is already present");
            return ""
         }
          if(Octopus.getCatImageURL(i) === catclick){
-            alert("cat image is aleray present");
+            prompt("cat image is aleray present");
             return ""
         }
        }
@@ -93,6 +93,7 @@ var Octopus = {
   },
 
   getCatName: function(i) {
+    console.log(i);
     this.catname = model.cats[i].name;
     if (this.catname != "") {
       return this.catname
@@ -156,27 +157,48 @@ var Octopus = {
 }
 var view = {
   init: function(flag) {
-    let elementtorender = document.getElementById('catview');
-    let buttontorender = document.getElementById('buttontemplate')
-    let buttontemplate = new Array();
-    elementtorender.addEventListener('click', Octopus.incrementCatClick);
-    console.log(model.cats);
-    console.log(model.cats.length);
+    this.catImageRender = document.getElementById('catview');
+    this.catDetailsRender = document.getElementById('catdetails');
+    let buttonToRender = document.getElementById('buttontemplate')
+    let buttonTemplate = new Array();
+     this.catImageRender.addEventListener('click', Octopus.incrementCatClick);
+//    console.log(model.cats);
+  //  console.log(model.cats.length);
     if(flag==true){
-     buttontorender.innerHTML = "";
+     buttonToRender.innerHTML = "";
     }
     for (i = 0; i< model.cats.length; i++) {
-      buttontemplate[i] = '<li> <a onclick = "view.render(' + Octopus.getCatId(i) + ')" > ' + Octopus.getCatName(i) + '</a> </li> ';
-      buttontorender.innerHTML = buttontorender.innerHTML + buttontemplate[i];
+      buttonTemplate[i] = '<li> <a onclick = "view.render(' + Octopus.getCatId(i) + ')" > ' + Octopus.getCatName(i) + '</a> </li> ';
+      buttonToRender.innerHTML = buttonToRender.innerHTML + buttonTemplate[i];
     }
   },
-  getTemplate: function(i) {
-    this.template = "<img id='" + Octopus.getCatName(i) + "' src='" + Octopus.getCatImageURL(i) + "'><h5><span id='cat-name'>Cat Name:" + Octopus.getCatName(i) + " </span>  <p> Click Me..</p> </h5><h4> No of Clicks :" + Octopus.getCatClicks(i) + "</h4>";
+  getTemplate: function(i,renderflag) {
+    console.log("getTemplate");
+    console.log(i);
+    console.log(renderflag);
+    if(renderflag !== "" && i !== "") {
+    if(renderflag==="catImage") {
+      this.template ="<img id='" + Octopus.getCatName(i) + "' src='" + Octopus.getCatImageURL(i)+"'>";
+    }
+    else if(renderflag==="catDetails"){
+      this.template="<h5><span id='cat-name'>Cat Name:" + Octopus.getCatName(i) + " </span>  <p> Click Me..</p> </h5><h4> No of Clicks :" + Octopus.getCatClicks(i) + "</h4>";
+    }
     return this.template;
-  },
+  }
+  else{
+     return prompt("Your cat is not found");
+  }
+},
+
+  //   this.template = "<img id='" + Octopus.getCatName(i) + "' src='" + Octopus.getCatImageURL(i) + "'><h5><span id='cat-name'>Cat Name:" + Octopus.getCatName(i) + " </span>  <p> Click Me..</p> </h5><h4> No of Clicks :" + Octopus.getCatClicks(i) + "</h4>";
+  //   return this.template;
+//},
   render: function(id) {
-    let elementtorender = document.getElementById('catview');
-    elementtorender.innerHTML = view.getTemplate(id);
+    // let elementtorender = document.getElementById('catview');
+    // elementtorender.innerHTML = view.getTemplate(id);
+    this.catImageRender.innerHTML=this.getTemplate(id,"catImage");
+    this.catDetailsRender.innerHTML=this.getTemplate(id,"catDetails");
+
   }
 
 
