@@ -100,8 +100,17 @@ var view = {
     var elementtorender = document.getElementById('catview');
     var buttontorender = document.getElementById('buttontemplate')
     let buttontemplate = new Array();
+    JSONArray jsonarray = model.cats;
+    console.log("inside init");
+    console.log(jsonarray);
+
     elementtorender.addEventListener('click', Octopus.incrementCatClick);
     for (i = 0; i < model.cats.length; i++) {
+        // Initialising Local Storage
+
+
+
+
       buttontemplate[i] = '<li> <a onclick = "view.render(' + Octopus.getCatId(i) + ')" > ' + Octopus.getCatName(i) + '</a> </li> ';
       buttontorender.innerHTML = buttontorender.innerHTML + buttontemplate[i];
       console.log(buttontemplate);
