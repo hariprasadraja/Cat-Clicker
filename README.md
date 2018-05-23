@@ -31,5 +31,7 @@ Designed while studing course Javascript Design Patterns in Udacity. [visit](htt
  ##### View 
              Templates for rendering and It's Operations.          
  ##### Controller         
-          Does Actual functionality. Reads and Updates the Model, Reder Corresponding View's based on Demand. 
+             Takes care of functionality
+             Reads and Updates the Model,
+             Reder Corresponding View's based on Demand. 
  
