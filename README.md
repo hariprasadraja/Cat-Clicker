@@ -1,33 +1,41 @@
 
-# MVC_CatClicker-Javascript
+# CatClicker In Javascript By MVC Pattern.
 
-It is a simple app by implementing mvc pattern in Javascript for my learning purpose.
-There are lot of variours cat clickers available.I made this when i was learning MVC pattern in javascirpt
+It is a simple app by implementing MVC pattern in Javascript for my learning purpose.
+There are lot of variours cat clickers available. I made my way of implementaion. 
+Designed while studing course Javascript Design Patterns in Udacity. [visit](https://classroom.udacity.com/courses/ud989)
 
-This application involves
- 1.catClickerBasic
- 2.MVC_CatClicker
- 3.MVC_CatClickerPro
- All the applications does the same functionality, Yet the Pro version has Admin feature which let you to create a new cat image.
- Cat images are also provided, so you can use any of the cat images.
 
- catClickerBasic :
+
+
+ ### Table Of Contents
+ ####     1.BASIC
+ ####     2.ADVANCED
+ ####     3.PRO
+ 
+
+ ### BASIC:
 
  It is a simple cat clicker, which display's two cats and calculate the number of click counts.
- It is the basic first version which does not follow any design patterns
+ It is the basic first version which does not follow any design patterns. 
+ If you want to find the actual power of MVC, go and find the Advanced and Pro version. 
  
- MVC_CatClicker :
+ 
+ ### ADVANCED :
  
  It is sturctured as MVC pattern, which the view part is seperated as two, and the model part holds the data required
  contorller is used to connect the model and the view.
  I won't say it is complete MVC catclicker since some improvements need to be made.
  
- MVC_CatClickerPro :
+ ### PRO :
   
- I developed the Pro version for the MVC_CatClicker,which involves responding dynamic changes in the view.
- I has a Admin mode where, we can add new cats.
- Here,
- Model part is used to hold the data and insert the new data
- View part will divide the view, and render corresponding template into it
- Contoller is used to serve the informations needed for both model and view
+  PRO version, Explains the Implementation and the power of MVC pattern. 
+  In Pro, 
+ ##### Model 
+             Javascript Object which holds all the Informations requiered for operations.    
+ ##### View 
+             Templates for rendering and It's Operations. 
+          
+ ##### Controller         
+          Does Actual functionality. Reads and Updates the Model, Reder Corresponding View's based on Demand. 
  
