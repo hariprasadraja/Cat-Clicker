@@ -1,4 +1,4 @@
-
+  
 # CatClicker In Javascript By MVC Pattern.
 
 It is a simple app by implementing MVC pattern in Javascript for my learning purpose.
@@ -33,5 +33,5 @@ Designed while studing course Javascript Design Patterns in Udacity. [visit](htt
  ##### Controller         
              Takes care of functionality
              Reads and Updates the Model,
-             Reder Corresponding View's based on Demand. 
+             Reader Corresponding View's based on Demand. 
  
